@@ -1,4 +1,4 @@
-class CrazyQueue:
+class QueueWithStacks:
   def __init__(self):
       self.first = []
       self.last = []
@@ -34,7 +34,7 @@ class CrazyQueue:
       print("Last Stack:", self.last)
 
 # Driver Code
-myQueue = CrazyQueue()
+myQueue = QueueWithStacks()
 print(myQueue.peek())  # None (Queue is empty)
 myQueue.enqueue("Joy")
 myQueue.enqueue("Matt")

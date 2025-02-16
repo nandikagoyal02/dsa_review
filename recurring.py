@@ -1,3 +1,5 @@
+# First Recurring Character Problem
+
 def first_recurring_character(arr):
   seen = []
   for i in arr:

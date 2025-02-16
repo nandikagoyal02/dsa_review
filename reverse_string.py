@@ -22,8 +22,7 @@ def merge_sorted_arrays(arr1, arr2):
 
 print(merge_sorted_arrays([0,3,4,31], [4,6,30]))
 
-# Reverse String with Recursion
-
+# Using Recursion
 def reverse_string(string):
   str = list(string)
   reversed = []

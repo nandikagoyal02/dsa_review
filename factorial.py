@@ -4,6 +4,7 @@ def factorial_iterative(value):
       answer *= i
   return answer
 
+# Using Recursion
 def factorial_recursive(value):
   if value == 2:
     return 2

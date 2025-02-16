@@ -15,6 +15,7 @@ def fibonacci_iterative_2(n):
         arr.append(arr[i - 2] + arr[i - 1])
     return arr[n]
 
+# Using Recursion
 def fibonacci_recursive(n):
   if n <= 0:
       return 0

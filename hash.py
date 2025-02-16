@@ -1,4 +1,4 @@
-# Hash Table using Separate Chaining:
+# Hash Table using Separate Chaining
 
 # The ‘Node‘ class will represent a node in a linked list. 
 # Each node will contain a key-value pair, as well as a pointer to the next node in the list.
@@ -25,19 +25,16 @@ class HashTable:
 
   def _hash(self, key):
     return hash(key) % self.capacity
-    # % self.capacity (modulus operator) restricts the hash value 
-    # to a valid index range (0 to capacity - 1).
+    # % self.capacity (modulus operator) restricts the hash value to a valid index range (0 to capacity - 1).
 
   def insert(self, key, value):
-    index = self._hash(key) # This tells us where in the hash table 
-    # we should store the given (key, value) pair.
+    index = self._hash(key) # This tells us where in the hash table we should store the given (key, value) pair.
     if self.table[index] is None:
       # If the bucket (slot) is empty, we create a new Node(key, value) and place it at self.table[index].
       self.table[index] = Node(key, value)
       self.size += 1
     else:
-      # If the bucket is already occupied, we traverse the linked list 
-      # stored at self.table[index].
+      # If the bucket is already occupied, we traverse the linked list stored at self.table[index].
       current = self.table[index]
       while current:
         # If the key already exists in the linked list, update its value.
@@ -47,8 +44,8 @@ class HashTable:
           return
         current = current.next
       # If the key wasn’t found, create a new Node(key, value).
-      # Insert it at the head of the linked list stored in self.table[index] 
-      # (chaining method).
+      # Insert it at the head of the linked list stored in self.table[index].
+      # (chaining method)
       new_node = Node(key, value)
       new_node.next = self.table[index]
       self.table[index] = new_node
